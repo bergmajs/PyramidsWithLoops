@@ -1,25 +1,27 @@
 /* 
- * Bill Nicholson
- * nicholdw@ucmail.uc.edu
- * Printing pyramids using loops. It kind-of works. 
- * What I really want is
-        1
-       222
-      33333
-     4444444
-    555555555 
+ * James Bergman
+ * bergmajs@mail.uc.edu
+ * 09/25/2019
+ * Pyramids with Loops
+ * github
 */
 package main;
 
 public class Main {
 
 	public static void main(String[] args) {
-		int lines = 5;
-		for (int i = 0; i < lines; i++) {
-			for (int j = 0; j < i+1; j++) {
-				System.out.print(j);
+		int rows = 5;		
+		for (int i = 1; i <= rows; i++) 
+		{			
+			for (int j = 1; j <= rows - i; j++) 
+			{
+				System.out.print(" ");
 			}
-			System.out.println("");
+			for (int k = 1; k <= (2 * i - 1); k++) 
+			{
+				System.out.print(i + "");
+			}
+			System.out.println();
 		}
 	}
 }
